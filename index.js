@@ -31,7 +31,7 @@ if (!fs.existsSync(path.join(process.cwd(), 'package.json'))) {
   process.exit(1);
 }
 
-console.log(pc.yellow('🔍 Scanning for dead dependencies...\\n'));
+console.log(pc.yellow('🔍 Scanning for dead dependencies...\n'));
 
 const options = {};
 
@@ -57,14 +57,14 @@ depcheck(process.cwd(), options, async (unused) => {
   ]);
 
   if (confirm) {
-    console.log(pc.yellow('\\nExecuting dependencies...'));
+    console.log(pc.yellow('\nExecuting dependencies...'));
     try {
-      execSync(\`npm uninstall \${deadDeps.join(' ')}\`, { stdio: 'inherit' });
-      console.log(pc.green('\\n✅ Carnage complete. Dead dependencies have been purged.'));
+      execSync(`npm uninstall ${deadDeps.join(' ')}`, { stdio: 'inherit' });
+      console.log(pc.green('\n✅ Carnage complete. Dead dependencies have been purged.'));
     } catch (e) {
-      console.log(pc.red('\\n❌ Failed to uninstall some dependencies. Do it manually.'));
+      console.log(pc.red('\n❌ Failed to uninstall some dependencies. Do it manually.'));
     }
   } else {
-    console.log(pc.gray('\\nCoward. The dead weight remains.'));
+    console.log(pc.gray('\nCoward. The dead weight remains.'));
   }
 });
