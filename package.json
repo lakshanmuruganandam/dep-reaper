@@ -1,0 +1,33 @@
+{
+  "name": "dep-reaper",
+  "version": "1.0.0",
+  "description": "Hunt down and execute unused dependencies bloated in your package.json.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "dependencies",
+    "cli",
+    "reaper",
+    "cleanup",
+    "depcheck",
+    "unused"
+  ],
+  "author": "Lakshan Muruganandam <lakshan@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "cli-spinners": "^3.4.0",
+    "commander": "^15.0.0",
+    "depcheck": "^1.4.7",
+    "inquirer": "^14.0.2",
+    "log-update": "^8.0.0",
+    "picocolors": "^1.1.1"
+  },
+  "type": "module",
+  "bin": {
+    "dep-reaper": "./index.js"
+  }
+}
